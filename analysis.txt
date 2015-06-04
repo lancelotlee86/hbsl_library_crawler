@@ -1,0 +1,116 @@
+主页面
+http://m.5read.com/967
+
+打开主页面后的页面 response cookie
+	JSESSIONID(变化的）	CFC28208F814F3BCE38AF083F23198DC.irdmblhome72b
+	maid			967
+	mduxiu（变化的）	musername%2c%3dblmobile%2c%21muserid%2c%3d1000086%2c%21mcompcode%2c%3d1219%2c%21menc%2c%3d2E527A969E5A76EDE03CDEE2BF6E5832
+	mgid			274
+	msign_dsr（变化的）	1433310648312
+	xc（未知）		5
+
+打开登陆页面的request headers{
+	Host: mc.m.5read.com
+	Connection: keep-alive
+	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36
+	Referer: http://m.5read.com/967
+	Accept-Encoding: gzip, deflate, sdch
+	Accept-Language: zh-CN,zh;q=0.8
+	Cookie: JSESSIONID=EBAA9376BA6DC9DC4B34B3E48C50F69E.irdmbl72b; mgid=274; maid=967; msign_dsr=1433310648312; mduxiu=musername%2c%3dblmobile%2c%21muserid%2c%3d1000086%2c%21mcompcode%2c%3d1219%2c%21menc%2c%3d2E527A969E5A76EDE03CDEE2BF6E5832; xc=5; Hm_lvt_d2fe4972d5c5737ef70e82fe0c8deaee=1433310649; Hm_lpvt_d2fe4972d5c5737ef70e82fe0c8deaee=1433310649
+}
+其中Cookie为{
+	JSESSIONID=					EBAA9376BA6DC9DC4B34B3E48C50F69E.irdmbl72b; 
+	mgid=						274; 
+	maid=						967; 
+	msign_dsr=					1433310648312; 
+	mduxiu=						musername%2c%3dblmobile%2c%21muserid%2c%3d1000086%2c%21mcompcode%2c%3d1219%2c%21menc%2c%3d2E527A969E5A76EDE03CDEE2BF6E5832; 
+	xc=						5; 
+	Hm_lvt_d2fe4972d5c5737ef70e82fe0c8deaee=	1433310649; 
+	Hm_lpvt_d2fe4972d5c5737ef70e82fe0c8deaee=	1433310649
+}
+
+登陆form表单action地址
+	/irdUser/login/opac/opacLogin.jspx
+
+登陆POST按钮发送地址
+	http://mc.m.5read.com/irdUser/login/opac/opacLogin.jspx
+
+登陆POST请求form参数
+	schoolid=967
+	&backurl=%2Fuser%2Fuc%2FshowUserCenter.jspx
+	&userType=0
+	&username=201300101
+	&password=201300101
+
+登陆POST请求request头文件
+	'Host': 'mc.m.5read.com',
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0
+	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+	Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+	Accept-Encoding: gzip, deflate
+	Referer: http://mc.m.5read.com/user/login/showLogin.jspx?backurl=%2Fuser%2Fuc%2FshowUserCenter.jspx
+	Cookie: JSESSIONID=EBAA9376BA6DC9DC4B34B3E48C50F69E.irdmbl72b; mgid=274; maid=967; msign_dsr=1433310648312; mduxiu=musername%2c%3dblmobile%2c%21muserid%2c%3d1000086%2c%21mcompcode%2c%3d1219%2c%21menc%2c%3d2E527A969E5A76EDE03CDEE2BF6E5832; xc=5; Hm_lvt_d2fe4972d5c5737ef70e82fe0c8deaee=1433310649; Hm_lpvt_d2fe4972d5c5737ef70e82fe0c8deaee=1433311081
+	Connection: keep-alive
+其中Cookie：{
+	mgid=						274; 
+	maid=						967; 
+	msign_dsr=					1433310648312; 
+	mduxiu=						musername%2c%3dblmobile%2c%21muserid%2c%3d1000086%2c%21mcompcode%2c%3d1219%2c%21menc%2c%3d2E527A969E5A76EDE03CDEE2BF6E5832
+	xc=						5
+	Hm_lvt_d2fe4972d5c5737ef70e82fe0c8deaee=	1433310649; 
+	Hm_lpvt_d2fe4972d5c5737ef70e82fe0c8deaee=	1433311081; 
+	JSESSIONID=					EBAA9376BA6DC9DC4B34B3E48C50F69E
+}
+
+登陆POST请求response头文件中获取的cookie值{
+	3gemail		""
+	mmr_enc		8DE6E127EF7A4AFE7457EC9D1F23E9C1
+	mmr_uid		FBF8E940AD9C9086C6AA3E93EE8CD439F0D30FC94CB4815B06E7826207AAE7FD94197B292C023B86
+	mmr_userid	4108300
+}
+
+post后302的页面，也就是个人信息页面
+	http://mc.m.5read.com/user/uc/showUserCenter.jspx
+
+个人借阅信息的url
+我怀疑跟cookie有关
+	http://mc.m.5read.com/cmpt/opac/opacLink.jspx?stype=1
+
+个人借阅信息页面的request headers{
+	Host: mc.m.5read.com
+	Connection: keep-alive
+	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36
+	Referer: http://mc.m.5read.com/user/uc/showOpacinfo.jspx
+	Accept-Encoding: gzip, deflate, sdch
+	Accept-Language: zh-CN,zh;q=0.8
+	Cookie: JSESSIONID=EBAA9376BA6DC9DC4B34B3E48C50F69E.irdmbl72b; mgid=274; maid=967; msign_dsr=1433310648312; mduxiu=musername%2c%3dblmobile%2c%21muserid%2c%3d1000086%2c%21mcompcode%2c%3d1219%2c%21menc%2c%3d2E527A969E5A76EDE03CDEE2BF6E5832; xc=5; mmr_enc=8DE6E127EF7A4AFE7457EC9D1F23E9C1; mmr_userid=4108300; mmr_uid=FBF8E940AD9C9086C6AA3E93EE8CD439F0D30FC94CB4815B06E7826207AAE7FD94197B292C023B86; 3gemail=""; Hm_lvt_d2fe4972d5c5737ef70e82fe0c8deaee=1433310649; Hm_lpvt_d2fe4972d5c5737ef70e82fe0c8deaee=1433311427
+}
+其中request headers 的 Cookie值为{
+	JSESSIONID=EBAA9376BA6DC9DC4B34B3E48C50F69E.irdmbl72b; 
+	mgid=274; 
+	maid=967; 
+	msign_dsr=1433310648312; 
+	mduxiu=musername%2c%3dblmobile%2c%21muserid%2c%3d1000086%2c%21mcompcode%2c%3d1219%2c%21menc%2c%3d2E527A969E5A76EDE03CDEE2BF6E5832; 
+	xc=5; 
+	mmr_enc=8DE6E127EF7A4AFE7457EC9D1F23E9C1; 
+	mmr_userid=4108300; 
+	mmr_uid=FBF8E940AD9C9086C6AA3E93EE8CD439F0D30FC94CB4815B06E7826207AAE7FD94197B292C023B86; 
+	3gemail=""; 
+	Hm_lvt_d2fe4972d5c5737ef70e82fe0c8deaee=1433310649; 
+	Hm_lpvt_d2fe4972d5c5737ef70e82fe0c8deaee=1433311427
+}
+实际最终需要的就是这个请求头，发送到http://mc.m.5read.com/cmpt/opac/opacLink.jspx?stype=1
+
+个人借阅信息页面的response headers{
+	Server: nginx
+	Date: Wed, 03 Jun 2015 06:16:58 GMT
+	Content-Length: 0
+	Connection: keep-alive
+	Set-Cookie: JSESSIONID=E385B9FF11287D612647A8B89334C3BA.irdmbl72b; Path=/; HttpOnly
+	Cache-Control: no-cache
+	Pragma: no-cache
+	Expires: Thu, 01 Jan 1970 00:00:00 GMT
+	Location: http://202.196.146.145:8080/sms/opac/user/lendStatus.action?sn=A03B7B762168599FEE1A7B33D9D715A3C62FB4F1908FBE53E801AC7E048927823C748E9CA8D21D9B20DD4DECCFDE3B0E5503A5259670605647263C4B2533319A5CAFA57D0C7549BA&xc=5
+}
