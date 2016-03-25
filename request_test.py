@@ -1,6 +1,7 @@
+# 这是一个测试用的脚本，把所有的东西写到一块儿了。
 import requests
 from bs4 import BeautifulSoup
-from pymongo import *
+#from pymongo import *
 import time
 from datetime import date, datetime
 from time import sleep
@@ -11,10 +12,10 @@ def str2date(date_str):
     dd = datetime(*d[:3])
     return dd
 
-con = Connection()
-db = con['hbsl_library_crawler']
+#con = Connection()
+#db = con['hbsl_library_crawler']
 
-for i in range(201400101, 201400120):   # 日后可以访问api，获取下一个
+for i in range(201315414, 201315415):   # 日后可以访问api，获取下一个
     print(i)
     student_number = i
     student_password = student_number
@@ -86,6 +87,7 @@ for i in range(201400101, 201400120):   # 日后可以访问api，获取下一�
     }
     r4 = s.get("http://mc.m.5read.com/cmpt/opac/opacLink.jspx?stype=1", headers = headers4)
 
+
     ''' 登出header 不能用
     headers5 = {    # logout header
         'Host': 'mc.m.5read.com',
@@ -117,7 +119,8 @@ for i in range(201400101, 201400120):   # 日后可以访问api，获取下一�
         info[1] = str2date(info[1])
         info[2] = str2date(info[2])
         books.append(dict(zip(key, info)))
-
+    print(books)
+    """
     # 将获取的这个学生这一天的借阅信息放入mongodb
     db.record.update(
         {'student_number': student_number},
@@ -130,5 +133,7 @@ for i in range(201400101, 201400120):   # 日后可以访问api，获取下一�
         },
         True
     )
+    """
+
     s.close()
     sleep(5)    # 等待5秒，防止被封ip
